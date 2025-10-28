@@ -6,12 +6,10 @@ import requests
 import json
 import time  # ✅ 1. Import the time library
 
-print("Hi Satwik")
-
 # --- Configuration ---
 
 # 1. Read all links from your file
-file_path = "/content/youtube_video_links.txt"
+file_path = "./youtube_video_links.txt"
 try:
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read().strip()
@@ -35,11 +33,11 @@ END_INDEX = 20  # Process 100 links in this batch
 # -----------------------------------------------------------------
 
 # 3. Define the SINGLE output file (it will be appended to)
-jsonl_save_path = "/content/drive/MyDrive/Data/training_data.jsonl"
+jsonl_save_path = "./training_data.jsonl"
 
 # 4. Define other paths and settings
 subtitle_lang = "te"
-cookies_file_path = "/content/www.youtube.com_cookies.txt"
+cookies_file_path = "./www.youtube.com_cookies.txt"
 # ✅ IMPORTANT: Replace with your actual API key
 genai.configure(api_key="AIzaSyCD4HDKZmQnqygedyutlNo3JusWDamIZCo")
 
